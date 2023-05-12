@@ -13,11 +13,7 @@ name: Build Redmi AX6
 on: 
   repository_dispatch:
   workflow_dispatch:
-    inputs:
-      ssh:
-        description: 'SSH connection to Actions'
-        required: false
-        default: 'false'
+  
   #release:
     #types: [published]
 
@@ -155,7 +151,7 @@ jobs:
         echo "账号：root" >> release.txt
         echo "密码：password" >> release.txt
         echo "编译的源码取自：https://github.com/coolsnowwolf/lede" >> release.txt
-        echo "集成插件：ssr plus、TTYD 终端" >> release.txt
+        echo "集成插件：简化版+ipv6" >> release.txt
         echo "默认主题：Argon" >> release.txt
         echo "status=success" >> $GITHUB_OUTPUT
     - name: Upload firmware to release
